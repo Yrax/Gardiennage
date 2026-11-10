@@ -1,0 +1,77 @@
+UTILISATEUR(
+    id_utilisateur,
+    nom_utilisateur,
+    prenom_utilisateur,
+    mail,
+    tel,
+    adresse,
+    description,
+    nombre_avis,
+    est_administrateur
+)
+
+PROPRIETAIRE(
+    id_proprietaire,
+    nom_utilisateur,
+    prenom_utilisateur,
+    mail,
+    tel,
+    adresse,
+    description,
+    nombre_avis,
+    est_administrateur,
+    #id_utilisateur
+)
+
+GARDIEN(
+    id_gardien,
+    note_moyenne,
+    nom_utilisateur,
+    prenom_utilisateur,
+    mail,
+    tel,
+    adresse,
+    description,
+    nombre_avis,
+    est_administrateur,
+    #id_utilisateur
+)
+
+ANIMAL(
+    id_animal,
+    nom_animal,
+    espece,
+    race,
+    age,
+    poids,
+    besoin_particulier,
+    #id_proprietaire
+)
+
+ANNONCE(
+    id_annonce,
+    nom_annonce,
+    date_debut,
+    date_fin,
+    nombre_animaux,
+    date_publication,
+    statut,
+    #id_gardien,
+    #id_proprietaire
+)
+
+AVIS(
+    id_avis,
+    commentaire,
+    nombre_etoiles,
+    nombre_upvote,
+    date_poste
+    #id_annonce,
+    #id_proprietaire,
+    #id_gardien
+)
+
+EST_INSCRIT(
+    #id_animal,
+    #id_annonce
+)
