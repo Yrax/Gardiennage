@@ -1,3 +1,4 @@
+<?php
 /*
 // À l'inscription
 $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -7,7 +8,6 @@ if (password_verify($_POST['password'], $utilisateur->password)) {
   $_SESSION['user_id'] = $utilisateur->id;
 }
 */
-<?php
 class AuthController {
 
   public function connexion(): void {
